@@ -1,0 +1,45 @@
+{
+  "name": "emitserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "dependencies": {
+    "babel-plugin-dynamic-import-node": "^2.3.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-server": "^0.7.0",
+    "geojson-path-finder": "^1.5.2",
+    "geojson-tools": "^0.2.2",
+    "lodash": "^4.17.15",
+    "@mapbox/geojson-merge": "^1.1.1",
+    "@turf/turf": "^5.1.6",
+    "aewx-metar-parser": "^0.10.1",
+    "color-convert": "^2.0.1",
+    "commander": "^4.0.1",
+    "fs": "^0.0.1-security",
+    "geojson-polygon-center": "^0.0.0",
+    "geojson-summary": "^0.5.0",
+    "js-yaml": "^3.13.1",
+    "jsonpath": "^1.0.2",
+    "leaflet-routing-machine": "^3.2.12",
+    "moment": "^2.24.0",
+    "simple-node-logger": "^18.12.23",
+    "sqlite3": "^4.1.1",
+    "vt-geojson": "^2.1.1",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "docker-compose up -d && docker attach emitServer",
+    "restart": "docker-compose down && docker-compose up -d",
+    "bash": "docker exec -it emitServer bash",
+    "live": "docker attach emitServer"
+  }
+}

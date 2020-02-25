@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  nodedevserver:
+    build: ./
+    container_name: emitServer
+    ports:
+    - ${port}:${port}
+    volumes:
+      - type: bind
+        source: ./
+        target: /dev/app
+    working_dir: /dev/app
+    entrypoint: nodemon --exec babel-node ./src/index.js
+    
